@@ -1,6 +1,21 @@
+/* adding fonts */
+@font-face {
+  font-family: 'Alanya';
+  src: url('fonts/Alanya-zqGD.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '1120';
+  src: url('fonts/1120-p38a.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'Ancient Sans';
-  src: url('fonts/Ancientsans-vnBW9.ttf') format('ttf');
+  src: url('fonts/Ancientsans-vnBW9.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,7 +27,115 @@
   font-family: 'Ancient Sans', sans-serif;
 }
 
+h1 {
+    font-family: 'Ancient Sans', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: normal;
+}
+
+h2 {
+    font-family:'Ancient Sans', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 2rem);;
+    font-weight: normal;
+}
+
 .navbar {
   background: #800813;
-  
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  /* keeps navbar on the top */
+  z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    /* margin: top right bottom left */
+    margin: 0 auto;
+    padding: 0 50px;
+    align-items: center;
+}
+
+.navbar__toggle{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar__toggle .bar{
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s ease;
+}
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+@media screen and (max-width: 7680px) {
+    .navbar__toggle {
+        display: flex;
+    }
+
+    .navbar__menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #800813;
+        max-height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+}
+
+.navbar__menu.active {
+    max-height: 1000px;
+}
+
+.navbar__item, .navbar__btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.navbar__links, .button {
+    width: 100%;
+    display: block;
+}
+
+.navbar__menu .navbar__links,
+.navbar__menu .navbar__btn .button {
+    font-family: 'Alanya', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+
+.navbar__menu .navbar__links.active,
+.navbar__menu .navbar__btn .button.active {
+    color: black;
+}
+
+#navbar__logo img {
+    height: 80px;
+    width: auto;
+    display: block;
 }
