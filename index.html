@@ -7,13 +7,16 @@
     <!-- screen formatting -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VGA Connector Tech</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/" id="navbar__logo">NEXT</a>
-        <div class="navbar__toggle" id="mobile-menu">
+        <a href="index.html" id="navbar__logo">
+            <img src="resources/logo.png" />
+        </a>
+        <div class="navbar__toggle" id="dropdown-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -21,13 +24,13 @@
         <!-- list of links -->
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/" class="navbar__links">Home</a>
+            <a href="index.html" class="navbar__links" id="home-link">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="/services.html" class="navbar__links">Services</a>
+            <a href="services.html" class="navbar__links" id="services-link">Services</a>
           </li>
           <li class="navbar__btn">
-            <a href="/services.html" class="button">About Me</a>
+            <a href="about_me.html" class="button" id="about-me-link">About Me</a>
           </li>
         </ul>
       </div>
@@ -35,5 +38,6 @@
     <!-- actual body -->
     <h1 style="text-align:center;">VGA Connector Tech</h1>
     <h2 style="text-align:center;">OS Installation, PC Building, PC Diagnosis, and More!</h2>
+    <script src = "scripts.js"></script>
   </body>
 </html>
